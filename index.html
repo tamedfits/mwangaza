@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Mwangaza Guest House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Mwangaza Guest House</h1>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h2>Welcome to Mwangaza Guest House</h2>
+            <p>Your comfort, our priority.</p>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms">
+        <h2>Our Rooms</h2>
+        <div class="room-list">
+            <div class="room">
+                <img src="./assets/room1.jpg" alt="Standard Room">
+                <h3>Standard Room</h3>
+                <p>Comfortable room with all basic amenities.</p>
+                <button class="book-btn" data-room="Standard Room">Book Now</button>
+            </div>
+            <div class="room">
+                <img src="./assets/room2.jpg" alt="Deluxe Room">
+                <h3>Deluxe Room</h3>
+                <p>Spacious room with premium facilities.</p>
+                <button class="book-btn" data-room="Deluxe Room">Book Now</button>
+            </div>
+            <div class="room">
+                <img src="./assets/room3.jpg" alt="Suite">
+                <h3>Suite</h3>
+                <p>Luxury suite with stunning views.</p>
+                <button class="book-btn" data-room="Suite">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <h2>Complete Your Booking</h2>
+        <form id="bookingForm" action="https://formspree.io/f/mnneblyq" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9+\-() ]+" required placeholder="Enter Your Phone Number">
+
+            <label for="roomType">Selected Room</label>
+            <input type="text" id="roomType" name="roomType" readonly 
+                   placeholder="Book a room above" required>
+
+            <label for="checkIn">Check-in Date</label>
+            <input type="date" id="checkIn" name="checkIn" required>
+
+            <label for="checkOut">Check-out Date</label>
+            <input type="date" id="checkOut" name="checkOut" required>
+
+            <button type="submit">Confirm & Send Booking</button>
+        </form>
+        <div id="successMessage" style="display:none; color:green; margin-top:20px; font-weight:bold;">
+            Booking sent successfully! We will contact you soon.
+        </div>
+        <div id="errorMessage" style="display:none; color:red; margin-top:20px; font-weight:bold;">
+            Error: Please correct the form and try again.
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+ 
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    
+    <p>
+        <strong>Phone (Tap to Chat on WhatsApp):</strong><br>
+        <a href="https://wa.me/254796618415" target="_blank" class="whatsapp-link">
+            +254 7966 184 15
+        </a>
+    </p>
+    
+    <p>
+        <strong>Email (Tap to Send Email):</strong><br>
+        <a href="mailto:info@mwangazaguesthouse@gmail.com" class="email-link">
+            info@mwangazaguesthouse@gmail.com
+        </a>
+    </p>
+    
+    <p><strong>Location:</strong> Nairobi, Kenya</p>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Mwangaza Guest House. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
